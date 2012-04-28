@@ -1,0 +1,22 @@
+@(message: String)
+
+@styles = {
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.min.css")">
+<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+}
+
+@scripts = {
+<script src="@routes.Assets.at("javascripts/require-jquery.js")" type="text/javascript" data-main="@routes.Assets.at("javascripts/main")"></script>
+}
+
+@main("Funding Facilitator", scripts, styles) {
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">@Messages("company.name")</a>
+    </div>
+  </div>
+</div>    
+    
+    
+}

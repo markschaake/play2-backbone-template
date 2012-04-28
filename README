@@ -1,0 +1,9 @@
+This is a Play 2.x template for starting a new Backbone.js application with the following technologies:
+
+Javascript / CoffeeScript
+* Require.js
+* Backbone.js
+* Jasmine BDD
+
+CSS / LESS
+* Twitter Bootstrap
