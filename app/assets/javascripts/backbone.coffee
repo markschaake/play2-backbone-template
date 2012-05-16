@@ -1,2 +1,2 @@
-define ['order!backbone-min'], () ->
+define ['libs/order!libs/backbone-min'], () ->
   return Backbone

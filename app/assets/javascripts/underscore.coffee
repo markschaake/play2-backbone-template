@@ -1,2 +1,2 @@
-define ['order!underscore-min'], () ->
+define ['libs/order!libs/underscore-min'], () ->
   return _
