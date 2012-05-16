@@ -1,16 +1,15 @@
 define [], ->
   class Logger
     INFO :
-      name : "INFO", val : 1
+      name : "INFO", val : 1, print: (msg) -> console.info msg
     WARN :
-      name : "WARN", val : 2
+      name : "WARN", val : 2, print: (msg) -> console.warn msg
     ERROR :
-      name : "ERROR", val : 3
+      name : "ERROR", val : 3, print: (msg) -> console.error msg
     _print : (level, msg) ->
-      # TODO consider dealing with browser support of "console" here,
-      # For now, we just fail to log messages if window.console doesn't exist
-      if window.console?
-        console.log "[#{level.name}] #{msg}" if level.val >= @level.val
+      level.print msg if level.val >= @level.val
+
+    trace: (msg) -> console.trace()
     info : (msg) -> @_print(@INFO, msg)
     warn : (msg) -> @_print(@WARN, msg)
     error : (msg) -> @_print(@ERROR, msg)
@@ -26,6 +25,6 @@ define [], ->
           when "WARN" then log.level = log.WARN
           else log.level = log.ERROR
       else
-        log.level = log.WARN
+        log.level = log.INFO
 
   new Logger()

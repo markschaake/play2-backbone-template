@@ -11,7 +11,7 @@ object ApplicationBuild extends Build {
 
     val appDependencies = Seq(
 	  "com.novus" % "salat-core_2.9.1" % "0.0.8-SNAPSHOT",
-	  "org.mockito" % "mockito-all" % "1.9.0"
+	  "org.mockito" % "mockito-all" % "1.9.0" % "test"
     )
 
     val main = PlayProject(appName, appVersion, appDependencies, mainLang = SCALA).settings(
