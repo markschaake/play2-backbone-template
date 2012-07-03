@@ -6,7 +6,7 @@ import org.ensime.sbt.util.SExp._
 
 object ApplicationBuild extends Build {
 
-    val appName         = "funding-facilitator"
+    val appName         = "my-backbone-play-app"
     val appVersion      = "1.0-SNAPSHOT"
 
     val appDependencies = Seq(
